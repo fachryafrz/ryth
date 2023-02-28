@@ -1,0 +1,29 @@
+{
+  "artists": [
+    {
+      "img_path": "https://i.scdn.co/image/ab6761610000e5eb77bf00f67e21f514dc44c485",
+      "name": "OneRepublic",
+      "music_plays": 2000000000
+    },
+    {
+      "img_path": "https://i.scdn.co/image/ab6761610000e5eb5a00969a4698c3132a15fbb0",
+      "name": "Taylor Swift",
+      "music_plays": 1500000000
+    },
+    {
+      "img_path": "https://i.scdn.co/image/ab67616d00001e02f907de96b9a4fbc04accc0d5",
+      "name": "Drake",
+      "music_plays": 1000000000
+    },
+    {
+      "img_path": "https://i.scdn.co/image/ab67616d0000b273a13ac79ec7e3ac62bd4ca4e8",
+      "name": "Dua Lipa",
+      "music_plays": 800000000
+    },
+    {
+      "img_path": "https://i.scdn.co/image/ab6761610000e5ebb5f9e28219c169fd4b9e8379",
+      "name": "The Weeknd",
+      "music_plays": 600000000
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "name": "OneRepublic",
+  "img_path": "https://i.scdn.co/image/ab6761610000e5eb77bf00f67e21f514dc44c485",
+  "members": [
+    "Ryan Tedder",
+    "Brent Kutzle",
+    "Zach Filkins",
+    "Drew Brown",
+    "Eddie Fisher"
+  ],
+  "genres": ["Pop", "Pop Rock", "Alternative Rock"],
+  "formed": "2002",
+  "origin": "Colorado Springs, Colorado, U.S.",
+  "albums": [
+    {
+      "title": "Dreaming Out Loud",
+      "year": 2007,
+      "tracks": [
+        {
+          "title": "Say (All I Need)",
+          "duration": 340
+        },
+        {
+          "title": "Stop and Stare",
+          "duration": 228
+        },
+        {
+          "title": "Apologize",
+          "duration": 213
+        }
+      ]
+    },
+    {
+      "title": "Waking Up",
+      "year": 2009,
+      "tracks": [
+        {
+          "title": "All the Right Moves",
+          "duration": 227
+        },
+        {
+          "title": "Secrets",
+          "duration": 212
+        },
+        {
+          "title": "Marchin On",
+          "duration": 284
+        }
+      ]
+    },
+    {
+      "title": "Oh My My",
+      "artist": "OneRepublic",
+      "year": 2016,
+      "tracks": [
+        {
+          "title": "Let's Hurt Tonight",
+          "duration": 232
+        },
+        {
+          "title": "Future Looks Good",
+          "duration": 237
+        },
+        {
+          "title": "Oh My My (feat. Cassius)",
+          "duration": 328
+        }
+      ]
+    }
+  ]
+}

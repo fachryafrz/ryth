@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Drivers License",
+    "artist": "Olivia Rodrigo",
+    "duration": 242,
+    "img_path": "https://i.scdn.co/image/ab67616d0000b2738ffc294c1c4362e8472d14cd"
+  },
+  {
+    "title": "Leave The Door Open",
+    "artist": "Silk Sonic",
+    "duration": 242,
+    "img_path": "https://i.scdn.co/image/ab67616d0000b2736f9e6abbd6fa43ac3cdbeee0"
+  },
+  {
+    "title": "Montero (Call Me By Your Name)",
+    "artist": "Lil Nas X",
+    "duration": 137,
+    "img_path": "https://i.scdn.co/image/ab67616d0000b27331b6685b4bdd41b4379c3b68"
+  },
+  {
+    "title": "Peaches (feat. Daniel Caesar & Giveon)",
+    "artist": "Justin Bieber",
+    "duration": 198,
+    "img_path": "https://i.scdn.co/image/ab67616d0000b273e6f407c7f3a0ec98845e4431"
+  },
+  {
+    "title": "Levitating (feat. DaBaby)",
+    "artist": "Dua Lipa",
+    "duration": 203,
+    "img_path": "https://i.scdn.co/image/ab67616d0000b273bd26ede1ae69327010d49946"
+  }
+]

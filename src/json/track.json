@@ -1,0 +1,14 @@
+{
+  "title": "West Coast",
+  "artist": "OneRepublic",
+  "album": {
+    "title": "Human (Deluxe)",
+    "year": 2021
+  },
+  "duration": 246,
+  "img_path": "https://i.scdn.co/image/ab67616d0000b273929014e8baba6299a54c5b7c",
+  "file_path": "/OneRepublic/Human (Deluxe)/West Coast.mp3",
+  "genre": "Pop",
+  "writers": ["Ryan Tedder", "Casey Smith", "Tyler Spry"],
+  "producers": ["Ryan Tedder", "Tyler Spry"]
+}
