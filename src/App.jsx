@@ -17,12 +17,12 @@ function App() {
 
   return (
     <Router>
-      <div id="app" className="bg-neutral-900 text-white min-h-screen flex">
+      <div id="app" className="bg-gray-900 text-white min-h-screen flex">
         <Sidebar sidebarToggle={sidebarToggle} />
         <main className={`p-4 sm:pl-6 relative w-full`}>
           <button
             onClick={handleSidebar}
-            className={`z-50 max-w-fit hidden sm:grid place-items-center p-1 rounded-full bg-neutral-800 text-neutral-500 absolute -left-[14px] transition-all hover:bg-white hover:text-neutral-900`}
+            className={`z-50 max-w-fit hidden sm:grid place-items-center p-1 rounded-full bg-gray-800 text-gray-500 absolute -left-[14px] transition-all hover:bg-white hover:text-gray-900`}
           >
             <IonIcon
               icon={!sidebarToggle ? Icon.chevronBack : Icon.chevronForward}

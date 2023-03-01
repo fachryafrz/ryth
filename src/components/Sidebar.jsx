@@ -10,7 +10,7 @@ export default function Sidebar({ sidebarToggle }) {
     <nav
       className={`${
         !sidebarToggle ? `min-w-[250px]` : `min-w-fit`
-      } h-[100svh] sticky top-0 bg-neutral-800 p-4 overflow-y-auto hidden sm:flex flex-col gap-4`}
+      } h-[100svh] sticky top-0 bg-gray-800 p-4 overflow-y-auto hidden sm:flex flex-col gap-4`}
     >
       <Link
         to={`/`}
@@ -29,9 +29,9 @@ export default function Sidebar({ sidebarToggle }) {
       </Link>
       <NavLink
         to={`/search`}
-        activeClassName="!bg-white !text-neutral-900"
+        activeClassName="!bg-white !text-gray-900"
         className={`btn justify-center aspect-square ${
-          !sidebarToggle && `!justify-start aspect-auto`
+          !sidebarToggle && `!justify-start !aspect-auto`
         }`}
       >
         <IonIcon icon={Icon.search} />
@@ -41,8 +41,8 @@ export default function Sidebar({ sidebarToggle }) {
         return (
           <section key={index}>
             <h2
-              className={`text-sm text-neutral-500 font-medium mb-1 mx-auto max-w-fit ${
-                !sidebarToggle && `mx-0`
+              className={`text-sm text-gray-500 font-medium mb-1 mx-auto max-w-fit ${
+                !sidebarToggle && `!mx-0`
               }`}
             >
               {item.section}
@@ -66,8 +66,8 @@ export default function Sidebar({ sidebarToggle }) {
                       to={link.url}
                       key={index}
                       activeClassName={`nav-active`}
-                      className={`flex items-center gap-2 p-4 rounded-lg text-neutral-500 font-medium hover:text-white transition-all mt-0.5 justify-center aspect-square ${
-                        !sidebarToggle && `py-2 !justify-start aspect-auto`
+                      className={`flex items-center gap-2 p-4 rounded-lg text-gray-500 font-medium hover:text-white transition-all mt-0.5 justify-center aspect-square ${
+                        !sidebarToggle && `py-2 !justify-start !aspect-auto`
                       }`}
                     >
                       <IonIcon icon={icons[index]} />
@@ -82,8 +82,8 @@ export default function Sidebar({ sidebarToggle }) {
       })}
       <button
         onClick={() => confirm("Are you sure wants to logout?")}
-        className={`btn w-full mt-auto bg-red-900 text-red-600 border-2 border-red-600 justify-center aspect-square hover:bg-red-600 hover:text-white ${
-          !sidebarToggle && `!justify-start aspect-auto`
+        className={`btn w-full mt-auto bg-red-900 text-red-400 border-2 border-red-600 justify-center aspect-square hover:bg-red-600 hover:text-white ${
+          !sidebarToggle && `!justify-start !aspect-auto`
         }`}
       >
         <IonIcon icon={Icon.logOutOutline} />

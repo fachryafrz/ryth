@@ -16,10 +16,10 @@
   }
 
   .nav-active {
-    @apply bg-neutral-700 !text-white;
+    @apply bg-gray-700 !text-white;
   }
 
   .btn {
-    @apply flex items-center gap-2 px-4 py-3 bg-neutral-700 rounded-lg text-neutral-400 transition-all hover:scale-105 active:scale-100;
+    @apply flex items-center gap-2 px-4 py-3 bg-gray-700 rounded-lg text-gray-400 transition-all hover:scale-105 active:scale-100;
   }
 }
