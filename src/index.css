@@ -8,6 +8,18 @@
   }
 
   ion-icon {
-    @apply text-[1.5rem];
+    @apply text-[1.25rem];
+  }
+
+  #listMusic:nth-child(5) {
+    @apply border-b-0;
+  }
+
+  .nav-active {
+    @apply bg-neutral-700 !text-white;
+  }
+
+  .btn {
+    @apply flex items-center gap-2 px-4 py-3 bg-neutral-700 rounded-lg text-neutral-400 transition-all hover:scale-105 active:scale-100;
   }
 }

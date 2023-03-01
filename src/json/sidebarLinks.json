@@ -1,0 +1,42 @@
+[
+  {
+    "section": "Menu",
+    "links": [
+      {
+        "name": "Home",
+        "icon": "grid",
+        "url": "/"
+      },
+      {
+        "name": "Discover",
+        "icon": "compass",
+        "url": "/discover"
+      },
+      {
+        "name": "Library",
+        "icon": "headset",
+        "url": "/library"
+      }
+    ]
+  },
+  {
+    "section": "Settings",
+    "links": [
+      {
+        "name": "Settings",
+        "icon": "settings",
+        "url": "/settings"
+      },
+      {
+        "name": "Help",
+        "icon": "help",
+        "url": "/help"
+      },
+      {
+        "name": "Account",
+        "icon": "person",
+        "url": "/me"
+      }
+    ]
+  }
+]
