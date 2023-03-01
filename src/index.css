@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  img {
+    @apply w-full h-full object-cover pointer-events-none;
+  }
+
+  ion-icon {
+    @apply text-[1.5rem];
+  }
+}

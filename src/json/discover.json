@@ -1,0 +1,18 @@
+[
+  {
+    "img_path": "https://i.ytimg.com/vi/sv83C4hRuJg/maxresdefault.jpg",
+    "title": "West Coast",
+    "artist": "OneRepublic",
+    "music_plays": "92000000",
+    "file_path": "/OneRepublic/Human (Deluxe)/West Coast.mp3",
+    "favorite": false
+  },
+  {
+    "img_path": "https://www.billboard.com/wp-content/uploads/2022/05/onerepublic-i-aint-worried-top-gun-music-video-2022-billboard-1548.jpg",
+    "title": "I Ain't Worried",
+    "artist": "OneRepublic",
+    "music_plays": "64000000",
+    "file_path": "/OneRepublic/Human (Deluxe)/West Coast.mp3",
+    "favorite": true
+  }
+]
