@@ -23,6 +23,9 @@
   #trackCard:hover figure {
     @apply blur-sm;
   }
+  #trackCard:hover #playIcon {
+    @apply opacity-100;
+  }
   #leftRemix:hover #contents {
     @apply px-2;
   }
