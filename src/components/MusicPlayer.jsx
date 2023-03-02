@@ -58,11 +58,13 @@ export default function MusicPlayer({ songList, setSongList }) {
     return `${formattedMinutes}:${formattedSeconds}`;
   };
 
-  const currentSong = songList[currentSongIndex];
+  const currentSong = songList;
 
   useEffect(() => {
     document.title = isPlaying
-      ? `${currentSong.title} - ${currentSong.artist}`
+      ? `${currentSong && currentSong.title} - ${
+          currentSong && currentSong.artist
+        }`
       : import.meta.env.VITE_APP_NAME;
 
     const intervalId = setInterval(() => {
@@ -85,7 +87,7 @@ export default function MusicPlayer({ songList, setSongList }) {
         className={`bg-gray-800 bg-opacity-70 backdrop-blur w-full p-4 xl:rounded-lg flex xl:flex-col items-center gap-2`}
       >
         <audio
-          src={currentSong.file_path}
+          src={currentSong && currentSong.file_path}
           onCanPlay={handleAudioCanPlay}
           onEnded={handleNextSong}
           ref={audioRef}
@@ -93,14 +95,17 @@ export default function MusicPlayer({ songList, setSongList }) {
         <figure
           className={`aspect-square rounded-lg overflow-hidden max-w-[50px] xl:max-w-[250px]`}
         >
-          <img src={currentSong.img_path} alt={currentSong.title} />
+          <img
+            src={currentSong && currentSong.img_path}
+            alt={currentSong && currentSong.title}
+          />
         </figure>
         <div className={`xl:text-center`}>
           <h2 className={`line-clamp-1 font-medium text-lg`}>
-            {currentSong.title}
+            {currentSong && currentSong.title}
           </h2>
           <span className={`line-clamp-1 text-sm text-gray-400 font-medium`}>
-            {currentSong.artist}
+            {currentSong && currentSong.artist}
           </span>
         </div>
         <div className={`flex items-center gap-1 xl:gap-2 ml-auto xl:ml-0`}>

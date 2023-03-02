@@ -6,16 +6,7 @@ import { IonIcon } from "@ionic/react";
 import * as Icon from "ionicons/icons";
 
 function App() {
-  const [songList, setSongList] = useState([
-    {
-      title: "West Coast",
-      artist: "OneRepublic",
-      duration: 192,
-      img_path:
-        "https://i.scdn.co/image/ab67616d00001e02929014e8baba6299a54c5b7c",
-      file_path: "/OneRepublic/Human (Deluxe)/West Coast.mp3",
-    },
-  ]);
+  const [songList, setSongList] = useState({});
 
   return (
     <Router>

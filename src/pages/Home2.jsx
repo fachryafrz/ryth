@@ -11,10 +11,6 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 export default function Home2({ songList, setSongList }) {
-  const [showPlayer, setShowPlayer] = useState(false);
-  const [currentTrack, setCurrentTrack] = useState(false); // Ubah jadi array nanti
-  const [isPlaying, setIsPlaying] = useState(false);
-
   const handleAddSong = (item) => {
     const existingTitle = songList.find((i) => i.title === item.title);
 
@@ -79,7 +75,11 @@ export default function Home2({ songList, setSongList }) {
           {data.map((item, index) => {
             return (
               <SwiperSlide key={index}>
-                <TrackCard item={item} songList={songList} />
+                <TrackCard
+                  item={item}
+                  songList={songList}
+                  setSongList={setSongList}
+                />
               </SwiperSlide>
             );
           })}
@@ -122,7 +122,7 @@ export default function Home2({ songList, setSongList }) {
                 return (
                   <button
                     key={index}
-                    onClick={() => handleAddSong(item)}
+                    onClick={() => setSongList(item)}
                     className={`flex items-center gap-4 w-full bg-gray-800 px-4 py-2 h-full rounded-lg hover:bg-gray-700`}
                   >
                     <span className={`text-sm text-gray-400 font-medium`}>
@@ -181,7 +181,7 @@ export default function Home2({ songList, setSongList }) {
                 className={`flex items-center hover:bg-gray-800 rounded-lg pr-2 transition-all`}
               >
                 <button
-                  onClick={() => handleAddSong(item)}
+                  onClick={() => setSongList(item)}
                   className={`p-2 grid grid-cols-3 md:grid-cols-4 gap-2 items-center w-full`}
                 >
                   <div className={`flex items-center gap-2 col-span-2`}>

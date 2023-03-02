@@ -1,15 +1,17 @@
 import { IonIcon } from "@ionic/react";
 import * as Icon from "ionicons/icons";
 
-export default function TrackCard({ item, songList }) {
+export default function TrackCard({ item, songList, setSongList }) {
   const handleAddSong = () => {
-    const existingTitle = songList.find((i) => i.title === item.title);
+    // const existingTitle = songList.find((i) => i.title === item.title);
 
-    if (!existingTitle) {
-      songList.push(item);
-    } else {
-      return false;
-    }
+    // if (!existingTitle) {
+    //   setSongList(item);
+    // } else {
+    //   return false;
+    // }
+
+    setSongList(item);
   };
 
   return (
