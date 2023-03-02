@@ -4,55 +4,48 @@
     "artist": "OneRepublic",
     "duration": 192,
     "img_path": "https://i.scdn.co/image/ab67616d00001e02929014e8baba6299a54c5b7c",
-    "file_path": "/OneRepublic/Human (Deluxe)/West Coast.mp3",
-    "favorite": false
+    "file_path": "/OneRepublic/Human (Deluxe)/West Coast.mp3"
   },
   {
     "title": "Drivers License",
     "artist": "Olivia Rodrigo",
-    "duration": 242,
+    "duration": 247,
     "img_path": "https://i.scdn.co/image/ab67616d0000b2738ffc294c1c4362e8472d14cd",
-    "file_path": "/Olivia Rodrigo/drivers license.mp3",
-    "favorite": false
+    "file_path": "/Olivia Rodrigo/drivers license.mp3"
   },
   {
     "title": "I Ain't Worried",
     "artist": "OneRepublic",
-    "duration": 148,
+    "duration": 149,
     "img_path": "https://i.scdn.co/image/ab67616d0000b273ec96e006b8bdfc582610ec13",
-    "file_path": "/OneRepublic/Human (Deluxe)/I Ain't Worried.mp3",
-    "favorite": false
+    "file_path": "/OneRepublic/Human (Deluxe)/I Ain't Worried.mp3"
   },
   {
     "title": "Leave The Door Open",
     "artist": "Silk Sonic",
-    "duration": 242,
+    "duration": 252,
     "img_path": "https://i.scdn.co/image/ab67616d0000b2736f9e6abbd6fa43ac3cdbeee0",
-    "file_path": "/Silk Sonic/Leave The Door Open.mp3",
-    "favorite": false
+    "file_path": "/Silk Sonic/Leave The Door Open.mp3"
   },
   {
     "title": "Montero (Call Me By Your Name)",
     "artist": "Lil Nas X",
-    "duration": 137,
+    "duration": 138,
     "img_path": "https://i.scdn.co/image/ab67616d0000b27331b6685b4bdd41b4379c3b68",
-    "file_path": "/Lil Nas X/MONTERO.mp3",
-    "favorite": false
+    "file_path": "/Lil Nas X/MONTERO.mp3"
   },
   {
     "title": "Peaches (feat. Daniel Caesar & Giveon)",
     "artist": "Justin Bieber",
-    "duration": 198,
+    "duration": 221,
     "img_path": "https://i.scdn.co/image/ab67616d0000b273e6f407c7f3a0ec98845e4431",
-    "file_path": "/Justin Bieber/Peaches.mp3",
-    "favorite": false
+    "file_path": "/Justin Bieber/Peaches.mp3"
   },
   {
     "title": "Levitating (feat. DaBaby)",
     "artist": "Dua Lipa",
-    "duration": 203,
+    "duration": 258,
     "img_path": "https://i.scdn.co/image/ab67616d0000b273bd26ede1ae69327010d49946",
-    "file_path": "/Dua Lipa/Levitating.mp3",
-    "favorite": false
+    "file_path": "/Dua Lipa/Levitating.mp3"
   }
 ]

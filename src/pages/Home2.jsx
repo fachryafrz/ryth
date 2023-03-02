@@ -42,7 +42,7 @@ export default function Home2({ songList, setSongList }) {
     <div className={`relative flex flex-col gap-4 pb-[82px] lg:pb-0`}>
       <section id="topSong" className={`flex flex-col gap-2`}>
         <div className={`flex items-center justify-between`}>
-          <h2 className={`capitalize text-2xl font-medium`}>
+          <h2 className={`capitalize text-lg sm:text-2xl font-medium`}>
             Top song this week
           </h2>
           <div className={`flex items-center gap-2`}>
@@ -87,7 +87,9 @@ export default function Home2({ songList, setSongList }) {
       </section>
       <section id="remix" className={`flex flex-col gap-2`}>
         <div className={`flex items-center justify-between`}>
-          <h2 className={`capitalize text-2xl font-medium`}>Remix for today</h2>
+          <h2 className={`capitalize text-lg sm:text-2xl font-medium`}>
+            Remix for today
+          </h2>
           <button
             className={`text-sm font-medium text-gray-400 hover:text-white`}
           >
@@ -95,7 +97,7 @@ export default function Home2({ songList, setSongList }) {
           </button>
         </div>
         <div>
-          <div className="grid lg:grid-cols-2 gap-2 lg:gap-4">
+          <div className="grid md:grid-cols-2 gap-2 lg:gap-4">
             <Link
               to={`/`}
               id="leftRemix"
@@ -155,7 +157,9 @@ export default function Home2({ songList, setSongList }) {
       </section>
       <section id="recentPlayed" className={`flex flex-col gap-2`}>
         <div className={`flex items-center justify-between`}>
-          <h2 className={`capitalize text-2xl font-medium`}>Recently Played</h2>
+          <h2 className={`capitalize text-lg sm:text-2xl font-medium`}>
+            Recently Played
+          </h2>
           <button
             className={`text-sm font-medium text-gray-400 hover:text-white`}
           >

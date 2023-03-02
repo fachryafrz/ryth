@@ -27,9 +27,6 @@ export default function MusicPlayer({ songList, setSongList }) {
   };
 
   const handleRestartSong = () => {
-    // setCurrentSongIndex(
-    //   currentSongIndex === 0 ? songList.length - 1 : currentSongIndex - 1
-    // );
     setCurrentTime(0);
     audioRef.current.currentTime = 0;
   };
