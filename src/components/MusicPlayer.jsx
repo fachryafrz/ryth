@@ -7,7 +7,7 @@ export default function MusicPlayer() {
   const seconds = data.duration % 60;
 
   return (
-    <div className={`bg-gray-800 p-2 rounded-lg flex flex-col gap-2 mt-auto`}>
+    <div className={`bg-gray-800 p-2 rounded-lg flex flex-col gap-2`}>
       <figure
         className={`aspect-square rounded-lg overflow-hidden max-w-[250px]`}
       >

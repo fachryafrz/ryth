@@ -20,9 +20,11 @@ export default function RightPanel() {
     <nav
       className={`${
         !sidebarToggle ? `min-w-[250px]` : `min-w-fit`
-      } h-[100svh] sticky top-0 border-l border-gray-700 overflow-y-auto p-4 hidden lg:flex flex-col gap-4`}
+      } h-[100svh] sticky top-0 border-l border-gray-700 overflow-y-auto hidden lg:flex flex-col gap-4`}
     >
-      <button className={`flex items-center gap-2 hover:bg-gray-800 rounded`}>
+      <button
+        className={`flex items-center gap-2 hover:bg-gray-800 rounded sticky top-0 bg-gray-900 pt-4 pb-2 px-4`}
+      >
         <figure className={`aspect-square w-[40px] rounded overflow-hidden`}>
           <img src={user.img_path} alt={user.name} />
         </figure>
@@ -36,7 +38,7 @@ export default function RightPanel() {
         </div>
       </button>
 
-      <div className={`flex flex-col gap-2`}>
+      <div className={`flex flex-col gap-2 px-4`}>
         <nav
           aria-label="Tabs"
           className={`flex items-center text-sm gap-4 font-medium`}
@@ -55,7 +57,7 @@ export default function RightPanel() {
             );
           })}
         </nav>
-        <div className={`flex flex-col gap-1`}>
+        <div className={`flex flex-col gap-1 max-h-full overflow-auto`}>
           {userItems[activeTab].contents.map((item, index) => {
             return (
               <button
@@ -65,14 +67,18 @@ export default function RightPanel() {
                 <figure className={`max-w-[30px] rounded overflow-hidden`}>
                   <img src={item.img_path} alt={item.name} />
                 </figure>
-                <span className={`text-sm font-medium`}>{item.name}</span>
+                <span className={`line-clamp-1 text-sm font-medium`}>
+                  {item.name}
+                </span>
               </button>
             );
           })}
         </div>
       </div>
 
-      <MusicPlayer />
+      <div className={`p-4 sticky bottom-0 mt-auto bg-gray-900`}>
+        <MusicPlayer />
+      </div>
     </nav>
   );
 }
