@@ -72,17 +72,17 @@ export default function MusicPlayer({ songList, setSongList }) {
   }, [currentSong, isPlaying]);
 
   return (
-    <div className={`w-full fixed inset-x-0 bottom-0 lg:static`}>
+    <div className={`w-full fixed inset-x-0 bottom-0 xl:static`}>
       <input
         type="range"
         min="0"
         max={audioRef.current && audioRef.current.duration}
         value={currentTime}
         onChange={handleSeek}
-        className={`w-full h-[2px] lg:hidden absolute inset-x-0 top-0 z-10`}
+        className={`w-full h-[2px] xl:hidden absolute inset-x-0 top-0 z-10`}
       />
       <div
-        className={`bg-gray-800 bg-opacity-70 backdrop-blur w-full p-4 lg:rounded-lg flex lg:flex-col items-center gap-2`}
+        className={`bg-gray-800 bg-opacity-70 backdrop-blur w-full p-4 xl:rounded-lg flex xl:flex-col items-center gap-2`}
       >
         <audio
           src={currentSong.file_path}
@@ -91,11 +91,11 @@ export default function MusicPlayer({ songList, setSongList }) {
           ref={audioRef}
         ></audio>
         <figure
-          className={`aspect-square rounded-lg overflow-hidden max-w-[50px] lg:max-w-[250px]`}
+          className={`aspect-square rounded-lg overflow-hidden max-w-[50px] xl:max-w-[250px]`}
         >
           <img src={currentSong.img_path} alt={currentSong.title} />
         </figure>
-        <div className={`lg:text-center`}>
+        <div className={`xl:text-center`}>
           <h2 className={`line-clamp-1 font-medium text-lg`}>
             {currentSong.title}
           </h2>
@@ -103,7 +103,7 @@ export default function MusicPlayer({ songList, setSongList }) {
             {currentSong.artist}
           </span>
         </div>
-        <div className={`flex items-center lg:gap-2 ml-auto lg:ml-0`}>
+        <div className={`flex items-center gap-1 xl:gap-2 ml-auto xl:ml-0`}>
           <time className={`text-sm text-gray-400 font-medium`}>
             {formatTime(currentTime)}
           </time>
@@ -113,9 +113,9 @@ export default function MusicPlayer({ songList, setSongList }) {
             max={audioRef.current && audioRef.current.duration}
             value={currentTime}
             onChange={handleSeek}
-            className={`w-full h-[2px] hidden lg:block`}
+            className={`w-full h-[2px] hidden xl:block`}
           />
-          <span className={`text-sm text-gray-400 font-medium lg:hidden`}>
+          <span className={`text-sm text-gray-400 font-medium xl:hidden`}>
             /
           </span>
           <time className={`text-sm text-gray-400 font-medium`}>
@@ -133,15 +133,15 @@ export default function MusicPlayer({ songList, setSongList }) {
             <IonIcon icon={Icon.playSkipForward} />
           </button>
           <button
-            onClick={currentTime === 0 ? handlePreviousSong : handleRestartSong}
+            onClick={currentTime < 1 ? handlePreviousSong : handleRestartSong}
             className={`order-2`}
           >
             <IonIcon icon={Icon.playSkipBack} />
           </button>
-          <button className={`order-1 !hidden lg:!flex`}>
+          <button className={`order-1 !hidden xl:!flex`}>
             <IonIcon icon={Icon.repeat} />
           </button>
-          <button className={`order-5 !hidden lg:!flex`}>
+          <button className={`order-5 !hidden xl:!flex`}>
             <IonIcon icon={Icon.shuffle} />
           </button>
         </div>

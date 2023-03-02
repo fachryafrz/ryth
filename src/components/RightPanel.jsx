@@ -20,7 +20,7 @@ export default function RightPanel({ songList, setSongList }) {
     <nav
       className={`${
         !sidebarToggle ? `min-w-[250px]` : `min-w-fit`
-      } h-[100svh] sticky top-0 border-l border-gray-700 overflow-y-auto hidden lg:flex flex-col gap-4`}
+      } h-[100svh] sticky top-0 border-l border-gray-700 overflow-y-auto hidden xl:flex flex-col gap-4`}
     >
       <button
         className={`flex items-center gap-2 rounded sticky top-0 bg-gray-900 pt-4 pb-2 px-4`}

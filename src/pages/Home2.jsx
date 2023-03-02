@@ -39,7 +39,7 @@ export default function Home2({ songList, setSongList }) {
   };
 
   return (
-    <div className={`relative flex flex-col gap-4 pb-[82px] lg:pb-0`}>
+    <div className={`relative flex flex-col gap-4 pb-[82px] xl:pb-0`}>
       <section id="topSong" className={`flex flex-col gap-2`}>
         <div className={`flex items-center justify-between`}>
           <h2 className={`capitalize text-lg sm:text-2xl font-medium`}>
@@ -97,7 +97,7 @@ export default function Home2({ songList, setSongList }) {
           </button>
         </div>
         <div>
-          <div className="grid md:grid-cols-2 gap-2 lg:gap-4">
+          <div className="grid md:grid-cols-2 gap-2 md:gap-4">
             <Link
               to={`/`}
               id="leftRemix"
@@ -224,7 +224,7 @@ export default function Home2({ songList, setSongList }) {
           })}
         </div>
       </section>
-      <div className={`lg:hidden flex justify-center`}>
+      <div className={`xl:hidden flex justify-center`}>
         <MusicPlayer songList={songList} setSongList={setSongList} />
       </div>
     </div>
