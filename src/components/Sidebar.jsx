@@ -96,7 +96,7 @@ export default function Sidebar() {
       })}
       <button
         onClick={() => confirm("Are you sure wants to logout?")}
-        className={`btn w-full mt-auto bg-red-900 text-red-400 border-2 border-red-600 justify-center aspect-square hover:bg-red-600 hover:text-white ${
+        className={`btn w-full mt-auto bg-red-900 text-white border-2 border-red-600 justify-center aspect-square hover:bg-red-600 hover:text-white ${
           !sidebarToggle && `!justify-start !aspect-auto`
         }`}
       >

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { MusicPlayer, Navbar, Sidebar } from "./components/Components";
+import { Navbar, RightPanel, Sidebar } from "./components/Components";
 import { Home, Artist, Home2 } from "./pages/Pages";
 import { IonIcon } from "@ionic/react";
 import * as Icon from "ionicons/icons";
@@ -20,6 +20,7 @@ function App() {
             </Route>
           </Switch>
         </main>
+        <RightPanel />
       </div>
     </Router>
   );

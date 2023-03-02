@@ -29,6 +29,9 @@
   #recentTracks:hover #recentIconPlay {
     @apply !opacity-100;
   }
+  #playerActions button {
+    @apply grid place-items-center p-2 rounded-full;
+  }
 
   .arrow-btn {
     @apply transition-all grid place-items-center p-1 border-2 rounded-full bg-white text-gray-900 hover:bg-transparent hover:border-white hover:text-white;

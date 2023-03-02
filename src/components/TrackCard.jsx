@@ -6,7 +6,7 @@ export default function TrackCard({ item }) {
       </figure>
       <div
         id="contents"
-        className={`text-left absolute inset-x-0 bottom-0 translate-y-full bg-gray-900 bg-opacity-50 p-2 backdrop-blur transition-all whitespace-nowrap`}
+        className={`text-left absolute inset-x-0 bottom-0 translate-y-full bg-gray-900 bg-opacity-50 p-2 backdrop-blur transition-all`}
       >
         <h3 className={`line-clamp-1 font-medium`}>{item.title}</h3>
         <span className={`line-clamp-1 text-sm font-medium text-gray-400`}>

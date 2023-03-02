@@ -112,7 +112,7 @@ export default function Home2() {
                       {index + 1}
                     </span>
                     <figure
-                      className={`min-w-[50px] max-w-[50px] md:max-w-[60px] rounded-lg overflow-hidden`}
+                      className={`min-w-[50px] max-w-[50px] rounded-lg overflow-hidden`}
                     >
                       <img src={item.img_path} alt={item.title} />
                     </figure>

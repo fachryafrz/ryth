@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Playlist",
+    "contents": [
+      {
+        "img_path": "https://i.scdn.co/image/ab67616d0000b273bd26ede1ae69327010d49946",
+        "name": "Likes"
+      },
+      {
+        "img_path": "https://i.scdn.co/image/ab67616d00001e02929014e8baba6299a54c5b7c",
+        "name": "OneRepublic"
+      },
+      {
+        "img_path": "https://i.scdn.co/image/ab67616d0000b2736f9e6abbd6fa43ac3cdbeee0",
+        "name": "Pop Music"
+      }
+    ]
+  },
+  {
+    "title": "Podcasts",
+    "contents": [
+      {
+        "img_path": "https://i.scdn.co/image/ab67616d00001e02929014e8baba6299a54c5b7c",
+        "name": "Joe Rogan"
+      }
+    ]
+  },
+  {
+    "title": "Albums",
+    "contents": [
+      {
+        "img_path": "https://i.scdn.co/image/ab67616d00001e02929014e8baba6299a54c5b7c",
+        "name": "Human"
+      }
+    ]
+  }
+]
