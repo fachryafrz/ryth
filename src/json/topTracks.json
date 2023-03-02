@@ -12,7 +12,7 @@
     "artist": "Olivia Rodrigo",
     "duration": 242,
     "img_path": "https://i.scdn.co/image/ab67616d0000b2738ffc294c1c4362e8472d14cd",
-    "file_path": "/OneRepublic/Human (Deluxe)/West Coast.mp3",
+    "file_path": "/Olivia Rodrigo/drivers license.mp3",
     "favorite": true
   },
   {
@@ -20,7 +20,7 @@
     "artist": "OneRepublic",
     "duration": 148,
     "img_path": "https://i.scdn.co/image/ab67616d0000b273ec96e006b8bdfc582610ec13",
-    "file_path": "/OneRepublic/Human (Deluxe)/West Coast.mp3",
+    "file_path": "/OneRepublic/Human (Deluxe)/I Ain't Worried.mp3",
     "favorite": true
   },
   {
@@ -28,7 +28,7 @@
     "artist": "Silk Sonic",
     "duration": 242,
     "img_path": "https://i.scdn.co/image/ab67616d0000b2736f9e6abbd6fa43ac3cdbeee0",
-    "file_path": "/OneRepublic/Human (Deluxe)/West Coast.mp3",
+    "file_path": "/Silk Sonic/Leave The Door Open.mp3",
     "favorite": false
   },
   {
@@ -36,7 +36,7 @@
     "artist": "Lil Nas X",
     "duration": 137,
     "img_path": "https://i.scdn.co/image/ab67616d0000b27331b6685b4bdd41b4379c3b68",
-    "file_path": "/OneRepublic/Human (Deluxe)/West Coast.mp3",
+    "file_path": "/Lil Nas X/MONTERO.mp3",
     "favorite": false
   },
   {
@@ -44,7 +44,7 @@
     "artist": "Justin Bieber",
     "duration": 198,
     "img_path": "https://i.scdn.co/image/ab67616d0000b273e6f407c7f3a0ec98845e4431",
-    "file_path": "/OneRepublic/Human (Deluxe)/West Coast.mp3",
+    "file_path": "/Justin Bieber/Peaches.mp3",
     "favorite": true
   },
   {
@@ -52,7 +52,7 @@
     "artist": "Dua Lipa",
     "duration": 203,
     "img_path": "https://i.scdn.co/image/ab67616d0000b273bd26ede1ae69327010d49946",
-    "file_path": "/OneRepublic/Human (Deluxe)/West Coast.mp3",
+    "file_path": "/Dua Lipa/Levitating.mp3",
     "favorite": false
   }
 ]

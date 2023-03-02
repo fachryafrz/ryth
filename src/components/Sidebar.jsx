@@ -14,9 +14,12 @@ export default function Sidebar() {
 
   return (
     <nav
+      style={{
+        height: "calc(100svh - 82px)",
+      }}
       className={`${
         !sidebarToggle ? `min-w-[250px]` : `min-w-fit`
-      } h-[100svh] sticky top-0 border-r border-gray-700 overflow-y-auto p-4 hidden sm:flex flex-col gap-4`}
+      } lg:!h-[100svh] mb-[82px] sticky top-0 border-r border-gray-700 overflow-y-auto p-4 hidden sm:flex flex-col gap-4`}
     >
       <div
         className={`flex gap-2 items-center ${

@@ -8,7 +8,7 @@ import MusicPlayer from "./MusicPlayer";
 import user from "../json/user.json";
 import userItems from "../json/userItems.json";
 
-export default function RightPanel() {
+export default function RightPanel({ songList, setSongList }) {
   const [sidebarToggle, setSidebarToggle] = useState(false);
   const [activeTab, setActiveTab] = useState(0);
 
@@ -77,7 +77,7 @@ export default function RightPanel() {
       </div>
 
       <div className={`p-4 sticky bottom-0 mt-auto bg-gray-900`}>
-        <MusicPlayer />
+        <MusicPlayer songList={songList} setSongList={setSongList} />
       </div>
     </nav>
   );

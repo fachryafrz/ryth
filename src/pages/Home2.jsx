@@ -10,10 +10,20 @@ import * as Icon from "ionicons/icons";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-export default function Home2() {
+export default function Home2({ songList, setSongList }) {
   const [showPlayer, setShowPlayer] = useState(false);
   const [currentTrack, setCurrentTrack] = useState(false); // Ubah jadi array nanti
   const [isPlaying, setIsPlaying] = useState(false);
+
+  const handleAddSong = (item) => {
+    const existingTitle = songList.find((i) => i.title === item.title);
+
+    if (!existingTitle) {
+      songList.push(item);
+    } else {
+      return false;
+    }
+  };
 
   const handleCurrentTrack = () => {
     setCurrentTrack(true);
@@ -29,7 +39,7 @@ export default function Home2() {
   };
 
   return (
-    <div className={`relative flex flex-col gap-4`}>
+    <div className={`relative flex flex-col gap-4 pb-[82px] lg:pb-0`}>
       <section id="topSong" className={`flex flex-col gap-2`}>
         <div className={`flex items-center justify-between`}>
           <h2 className={`capitalize text-2xl font-medium`}>
@@ -69,7 +79,7 @@ export default function Home2() {
           {data.map((item, index) => {
             return (
               <SwiperSlide key={index}>
-                <TrackCard item={item} />
+                <TrackCard item={item} songList={songList} />
               </SwiperSlide>
             );
           })}
@@ -85,7 +95,7 @@ export default function Home2() {
           </button>
         </div>
         <div>
-          <div className="grid lg:grid-cols-2 lg:gap-4">
+          <div className="grid lg:grid-cols-2 gap-2 lg:gap-4">
             <Link
               to={`/`}
               id="leftRemix"
@@ -110,7 +120,7 @@ export default function Home2() {
                 return (
                   <button
                     key={index}
-                    onClick={handleCurrentTrack}
+                    onClick={() => handleAddSong(item)}
                     className={`flex items-center gap-4 w-full bg-gray-800 px-4 py-2 h-full rounded-lg hover:bg-gray-700`}
                   >
                     <span className={`text-sm text-gray-400 font-medium`}>
@@ -158,6 +168,7 @@ export default function Home2() {
               <div
                 key={index}
                 id="recentTracks"
+                onClick={() => handleAddSong(item)}
                 className={`flex items-center hover:bg-gray-700 rounded-lg pr-2 transition-all`}
               >
                 <button
@@ -202,6 +213,9 @@ export default function Home2() {
           })}
         </div>
       </section>
+      <div className={`lg:hidden flex justify-center`}>
+        <MusicPlayer songList={songList} setSongList={setSongList} />
+      </div>
     </div>
   );
 }

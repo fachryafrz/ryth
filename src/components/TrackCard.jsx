@@ -1,9 +1,23 @@
 import { IonIcon } from "@ionic/react";
 import * as Icon from "ionicons/icons";
 
-export default function TrackCard({ item }) {
+export default function TrackCard({ item, songList }) {
+  const handleAddSong = () => {
+    const existingTitle = songList.find((i) => i.title === item.title);
+
+    if (!existingTitle) {
+      songList.push(item);
+    } else {
+      return false;
+    }
+  };
+
   return (
-    <button id="trackCard" className={`relative rounded-lg overflow-hidden`}>
+    <button
+      id="trackCard"
+      onClick={handleAddSong}
+      className={`relative rounded-lg overflow-hidden`}
+    >
       <figure className={`aspect-square transition-all`}>
         <img src={item.img_path} alt={item.title} />
       </figure>
@@ -21,7 +35,9 @@ export default function TrackCard({ item }) {
         id="contents"
         className={`text-left absolute inset-x-0 bottom-0 translate-y-full bg-gray-900 bg-opacity-50 p-2 backdrop-blur transition-all`}
       >
-        <h3 className={`line-clamp-1 font-medium`}>{item.title}</h3>
+        <h3 title={item.title} className={`line-clamp-1 font-medium`}>
+          {item.title}
+        </h3>
         <span className={`line-clamp-1 text-sm font-medium text-gray-400`}>
           {item.artist}
         </span>
