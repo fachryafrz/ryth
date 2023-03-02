@@ -6,28 +6,11 @@ import { IonIcon } from "@ionic/react";
 import * as Icon from "ionicons/icons";
 
 function App() {
-  const [showPlayer, setShowPlayer] = useState(false);
-  const [currentTrack, setCurrentTrack] = useState(false); // Ubah jadi array nanti
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [sidebarToggle, setSidebarToggle] = useState(false);
-
-  const handleSidebar = () => {
-    setSidebarToggle(!sidebarToggle);
-  };
-
   return (
     <Router>
       <div id="app" className="bg-gray-900 text-white min-h-screen flex">
-        <Sidebar sidebarToggle={sidebarToggle} />
-        <main className={`p-4 sm:pl-6 relative w-full`}>
-          <button
-            onClick={handleSidebar}
-            className={`z-50 max-w-fit hidden sm:grid place-items-center p-1 rounded-full bg-gray-800 text-gray-500 absolute -left-[14px] transition-all hover:bg-white hover:text-gray-900`}
-          >
-            <IonIcon
-              icon={!sidebarToggle ? Icon.chevronBack : Icon.chevronForward}
-            />
-          </button>
+        <Sidebar />
+        <main className={`p-4 relative w-full overflow-hidden`}>
           <Switch>
             <Route exact path={`/`}>
               <Home2 />

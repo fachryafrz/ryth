@@ -1,9 +1,25 @@
 [
   {
+    "title": "West Coast",
+    "artist": "OneRepublic",
+    "duration": 192,
+    "img_path": "https://i.scdn.co/image/ab67616d00001e02929014e8baba6299a54c5b7c",
+    "file_path": "/OneRepublic/Human (Deluxe)/West Coast.mp3",
+    "favorite": true
+  },
+  {
     "title": "Drivers License",
     "artist": "Olivia Rodrigo",
     "duration": 242,
     "img_path": "https://i.scdn.co/image/ab67616d0000b2738ffc294c1c4362e8472d14cd",
+    "file_path": "/OneRepublic/Human (Deluxe)/West Coast.mp3",
+    "favorite": true
+  },
+  {
+    "title": "I Ain't Worried",
+    "artist": "OneRepublic",
+    "duration": 148,
+    "img_path": "https://i.scdn.co/image/ab67616d0000b273ec96e006b8bdfc582610ec13",
     "file_path": "/OneRepublic/Human (Deluxe)/West Coast.mp3",
     "favorite": true
   },

@@ -5,28 +5,45 @@ import logo from "/Rhythmic.png";
 import links from "../json/sidebarLinks.json";
 import { useEffect, useState } from "react";
 
-export default function Sidebar({ sidebarToggle }) {
+export default function Sidebar() {
+  const [sidebarToggle, setSidebarToggle] = useState(false);
+
+  const handleSidebar = () => {
+    setSidebarToggle(!sidebarToggle);
+  };
+
   return (
     <nav
       className={`${
         !sidebarToggle ? `min-w-[250px]` : `min-w-fit`
-      } h-[100svh] sticky top-0 bg-gray-800 p-4 overflow-y-auto hidden sm:flex flex-col gap-4`}
+      } h-[100svh] sticky top-0 border-r border-gray-700 overflow-y-auto p-4 hidden sm:flex flex-col gap-4`}
     >
-      <Link
-        to={`/`}
-        className={`${
-          !sidebarToggle && `p-4`
-        } flex items-center gap-2 max-w-fit mx-auto`}
+      <div
+        className={`flex gap-2 items-center ${
+          !sidebarToggle ? `flex-row` : `flex-col`
+        }`}
       >
-        <figure className={`w-[40px]`}>
-          <img src={logo} alt={import.meta.env.VITE_APP_NAME} />
-        </figure>
-        {!sidebarToggle && (
-          <h1 className={`font-medium text-2xl`}>
-            {import.meta.env.VITE_APP_NAME}
-          </h1>
-        )}
-      </Link>
+        <button onClick={handleSidebar} className={`z-50 max-w-fit arrow-btn`}>
+          <IonIcon
+            icon={!sidebarToggle ? Icon.chevronBack : Icon.chevronForward}
+          />
+        </button>
+        <Link
+          to={`/`}
+          className={`${
+            !sidebarToggle && `p-0`
+          } flex items-center gap-2 max-w-fit`}
+        >
+          <figure className={!sidebarToggle ? `w-[40px]` : `w-[30px]`}>
+            <img src={logo} alt={import.meta.env.VITE_APP_NAME} />
+          </figure>
+          {!sidebarToggle && (
+            <h1 className={`font-medium text-2xl`}>
+              {import.meta.env.VITE_APP_NAME}
+            </h1>
+          )}
+        </Link>
+      </div>
       <NavLink
         to={`/search`}
         activeClassName="!bg-white !text-gray-900"
@@ -50,15 +67,12 @@ export default function Sidebar({ sidebarToggle }) {
             <ul>
               {item.links.map((link, index) => {
                 const [icons, setIcons] = useState([]);
-
                 useEffect(() => {
                   const getIcons = () => {
                     setIcons(item.links.map((genre) => Icon[genre.icon]));
                   };
-
                   getIcons();
                 }, []);
-
                 return (
                   <li>
                     <NavLink
