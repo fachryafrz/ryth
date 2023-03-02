@@ -20,6 +20,14 @@ export default function Home2() {
     setShowPlayer(true);
   };
 
+  const formatTime = (time) => {
+    const minutes = Math.floor(time / 60);
+    const seconds = Math.floor(time % 60);
+    const formattedMinutes = ("0" + minutes).slice(-2);
+    const formattedSeconds = ("0" + seconds).slice(-2);
+    return `${formattedMinutes}:${formattedSeconds}`;
+  };
+
   return (
     <div className={`relative flex flex-col gap-4`}>
       <section id="topSong" className={`flex flex-col gap-2`}>
@@ -99,9 +107,6 @@ export default function Home2() {
             </Link>
             <div id="rightRemix" className={`flex flex-col gap-1`}>
               {data.slice(0, 5).map((item, index) => {
-                const minutes = Math.floor(item.duration / 60);
-                const seconds = item.duration % 60;
-
                 return (
                   <button
                     key={index}
@@ -128,9 +133,9 @@ export default function Home2() {
                     </div>
                     <time
                       className={`ml-auto text-sm text-gray-400 font-medium`}
-                    >{`${minutes}:${
-                      seconds < 10 ? `0${seconds}` : seconds
-                    }`}</time>
+                    >
+                      {formatTime(item.duration)}
+                    </time>
                   </button>
                 );
               })}
@@ -149,9 +154,6 @@ export default function Home2() {
         </div>
         <div className={`border border-gray-700 rounded-lg p-2`}>
           {data.map((item, index) => {
-            const minutes = Math.floor(item.duration / 60);
-            const seconds = item.duration % 60;
-
             return (
               <div
                 key={index}
@@ -182,7 +184,7 @@ export default function Home2() {
                   <time
                     className={`hidden md:block text-sm text-gray-400 font-medium`}
                   >
-                    {`${minutes}:${seconds < 10 ? `0${seconds}` : seconds}`}
+                    {formatTime(item.duration)}
                   </time>
                 </button>
                 <button className={`ml-auto p-2 flex`}>

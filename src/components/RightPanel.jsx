@@ -23,7 +23,7 @@ export default function RightPanel() {
       } h-[100svh] sticky top-0 border-l border-gray-700 overflow-y-auto hidden lg:flex flex-col gap-4`}
     >
       <button
-        className={`flex items-center gap-2 hover:bg-gray-800 rounded sticky top-0 bg-gray-900 pt-4 pb-2 px-4`}
+        className={`flex items-center gap-2 rounded sticky top-0 bg-gray-900 pt-4 pb-2 px-4`}
       >
         <figure className={`aspect-square w-[40px] rounded overflow-hidden`}>
           <img src={user.img_path} alt={user.name} />

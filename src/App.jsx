@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Navbar, RightPanel, Sidebar } from "./components/Components";
 import { Home, Artist, Home2 } from "./pages/Pages";
