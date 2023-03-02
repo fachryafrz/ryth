@@ -106,7 +106,7 @@ export default function MusicPlayer({ songList, setSongList }) {
             {currentSong.artist}
           </span>
         </div>
-        <div className={`flex items-center gap-2 ml-auto lg:ml-0`}>
+        <div className={`flex items-center lg:gap-2 ml-auto lg:ml-0`}>
           <time className={`text-sm text-gray-400 font-medium`}>
             {formatTime(currentTime)}
           </time>

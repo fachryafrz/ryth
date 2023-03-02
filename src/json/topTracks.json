@@ -5,7 +5,7 @@
     "duration": 192,
     "img_path": "https://i.scdn.co/image/ab67616d00001e02929014e8baba6299a54c5b7c",
     "file_path": "/OneRepublic/Human (Deluxe)/West Coast.mp3",
-    "favorite": true
+    "favorite": false
   },
   {
     "title": "Drivers License",
@@ -13,7 +13,7 @@
     "duration": 242,
     "img_path": "https://i.scdn.co/image/ab67616d0000b2738ffc294c1c4362e8472d14cd",
     "file_path": "/Olivia Rodrigo/drivers license.mp3",
-    "favorite": true
+    "favorite": false
   },
   {
     "title": "I Ain't Worried",
@@ -21,7 +21,7 @@
     "duration": 148,
     "img_path": "https://i.scdn.co/image/ab67616d0000b273ec96e006b8bdfc582610ec13",
     "file_path": "/OneRepublic/Human (Deluxe)/I Ain't Worried.mp3",
-    "favorite": true
+    "favorite": false
   },
   {
     "title": "Leave The Door Open",
@@ -45,7 +45,7 @@
     "duration": 198,
     "img_path": "https://i.scdn.co/image/ab67616d0000b273e6f407c7f3a0ec98845e4431",
     "file_path": "/Justin Bieber/Peaches.mp3",
-    "favorite": true
+    "favorite": false
   },
   {
     "title": "Levitating (feat. DaBaby)",

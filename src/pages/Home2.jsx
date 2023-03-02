@@ -164,14 +164,20 @@ export default function Home2({ songList, setSongList }) {
         </div>
         <div className={`border border-gray-700 rounded-lg p-2`}>
           {data.map((item, index) => {
+            const [like, setLike] = useState(false);
+
+            const handleLike = () => {
+              setLike(!like);
+            };
+
             return (
               <div
                 key={index}
                 id="recentTracks"
-                onClick={() => handleAddSong(item)}
-                className={`flex items-center hover:bg-gray-700 rounded-lg pr-2 transition-all`}
+                className={`flex items-center hover:bg-gray-800 rounded-lg pr-2 transition-all`}
               >
                 <button
+                  onClick={() => handleAddSong(item)}
                   className={`p-2 grid grid-cols-3 md:grid-cols-4 gap-2 items-center w-full`}
                 >
                   <div className={`flex items-center gap-2 col-span-2`}>
@@ -198,10 +204,11 @@ export default function Home2({ songList, setSongList }) {
                     {formatTime(item.duration)}
                   </time>
                 </button>
-                <button className={`ml-auto p-2 flex`}>
-                  <IonIcon
-                    icon={!item.favorite ? Icon.heartOutline : Icon.heart}
-                  />
+                <button
+                  onClick={handleLike}
+                  className={`ml-auto p-2 flex hover:bg-white hover:bg-opacity-10 rounded`}
+                >
+                  <IonIcon icon={!like ? Icon.heartOutline : Icon.heart} />
                 </button>
                 <button
                   className={`p-2 flex hover:bg-white hover:bg-opacity-10 rounded`}
