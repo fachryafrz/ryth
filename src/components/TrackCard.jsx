@@ -18,7 +18,7 @@ export default function TrackCard({ item, songList, setSongList }) {
     <button
       id="trackCard"
       onClick={handleAddSong}
-      className={`relative rounded-lg overflow-hidden`}
+      className={`relative rounded-lg overflow-hidden w-full`}
     >
       <figure className={`aspect-square transition-all`}>
         <img src={item.img_path} alt={item.title} />

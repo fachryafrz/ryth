@@ -68,7 +68,7 @@ export default function MusicPlayer({ songList, setSongList }) {
       : import.meta.env.VITE_APP_NAME;
 
     const intervalId = setInterval(() => {
-      setCurrentTime(audioRef.current.currentTime);
+      setCurrentTime(audioRef.current && audioRef.current.currentTime);
     }, 1000);
     return () => clearInterval(intervalId);
   }, [currentSong, isPlaying]);

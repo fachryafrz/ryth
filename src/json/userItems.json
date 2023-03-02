@@ -3,15 +3,15 @@
     "title": "Playlist",
     "contents": [
       {
-        "img_path": "https://i.scdn.co/image/ab67616d0000b273bd26ede1ae69327010d49946",
+        "img_path": "https://upload.wikimedia.org/wikipedia/en/d/da/Alan_Walker_-_Faded.png",
         "name": "Likes"
       },
       {
-        "img_path": "https://i.scdn.co/image/ab67616d00001e02929014e8baba6299a54c5b7c",
-        "name": "OneRepublic"
+        "img_path": "https://is3-ssl.mzstatic.com/image/thumb/Music122/v4/44/c4/e5/44c4e538-197e-ec78-6cfa-9dd12554af99/5055199513140.png/1200x1200bf-60.jpg",
+        "name": "Cartoon All Tracks"
       },
       {
-        "img_path": "https://i.scdn.co/image/ab67616d0000b2736f9e6abbd6fa43ac3cdbeee0",
+        "img_path": "https://i1.sndcdn.com/artworks-000044125964-zco3u9-t500x500.jpg",
         "name": "Pop Music"
       }
     ]
@@ -20,7 +20,7 @@
     "title": "Podcasts",
     "contents": [
       {
-        "img_path": "https://i.scdn.co/image/ab67616d00001e02929014e8baba6299a54c5b7c",
+        "img_path": "https://i1.sndcdn.com/artworks-000044125964-zco3u9-t500x500.jpg",
         "name": "Joe Rogan"
       }
     ]
@@ -29,7 +29,7 @@
     "title": "Albums",
     "contents": [
       {
-        "img_path": "https://i.scdn.co/image/ab67616d00001e02929014e8baba6299a54c5b7c",
+        "img_path": "https://is3-ssl.mzstatic.com/image/thumb/Music122/v4/44/c4/e5/44c4e538-197e-ec78-6cfa-9dd12554af99/5055199513140.png/1200x1200bf-60.jpg",
         "name": "Human (Deluxe)"
       }
     ]

@@ -1,51 +1,72 @@
 [
   {
-    "title": "West Coast",
-    "artist": "OneRepublic",
-    "duration": 192,
-    "img_path": "https://i.scdn.co/image/ab67616d00001e02929014e8baba6299a54c5b7c",
-    "file_path": "/OneRepublic/Human (Deluxe)/West Coast.mp3"
+    "title": "Fade",
+    "artist": "Alan Walker",
+    "duration": 264,
+    "img_path": "https://upload.wikimedia.org/wikipedia/en/d/da/Alan_Walker_-_Faded.png",
+    "file_path": "/Alan Walker/Alan Walker - Fade.mp3"
   },
   {
-    "title": "Drivers License",
-    "artist": "Olivia Rodrigo",
-    "duration": 247,
-    "img_path": "https://i.scdn.co/image/ab67616d0000b2738ffc294c1c4362e8472d14cd",
-    "file_path": "/Olivia Rodrigo/drivers license.mp3"
+    "title": "Nekozilla",
+    "artist": "Different Heaven",
+    "duration": 166,
+    "img_path": "https://i1.sndcdn.com/artworks-000125542315-zczjfr-t500x500.jpg",
+    "file_path": "/Different Heaven/Different Heaven - Nekozilla.mp3"
   },
   {
-    "title": "I Ain't Worried",
-    "artist": "OneRepublic",
-    "duration": 149,
-    "img_path": "https://i.scdn.co/image/ab67616d0000b273ec96e006b8bdfc582610ec13",
-    "file_path": "/OneRepublic/Human (Deluxe)/I Ain't Worried.mp3"
+    "title": "On & On",
+    "artist": "Cartoon",
+    "duration": 208,
+    "img_path": "https://is3-ssl.mzstatic.com/image/thumb/Music122/v4/44/c4/e5/44c4e538-197e-ec78-6cfa-9dd12554af99/5055199513140.png/1200x1200bf-60.jpg",
+    "file_path": "/Cartoon/Cartoon - On & On (feat. Daniel Levi).mp3"
   },
   {
-    "title": "Leave The Door Open",
-    "artist": "Silk Sonic",
-    "duration": 252,
-    "img_path": "https://i.scdn.co/image/ab67616d0000b2736f9e6abbd6fa43ac3cdbeee0",
-    "file_path": "/Silk Sonic/Leave The Door Open.mp3"
+    "title": "Heroes Tonight",
+    "artist": "Janji",
+    "duration": 208,
+    "img_path": "https://i.scdn.co/image/ab67616d0000b2739b07b787123fe99fffc9c789",
+    "file_path": "/Janji/Janji - Heroes Tonight (feat. Johnning).mp3"
   },
   {
-    "title": "Montero (Call Me By Your Name)",
-    "artist": "Lil Nas X",
-    "duration": 138,
-    "img_path": "https://i.scdn.co/image/ab67616d0000b27331b6685b4bdd41b4379c3b68",
-    "file_path": "/Lil Nas X/MONTERO.mp3"
+    "title": "Candyland",
+    "artist": "Tobu",
+    "duration": 198,
+    "img_path": "https://linkstorage.linkfire.com/medialinks/images/b5451de9-70b2-4de5-910d-e4af5afb6540/artwork-440x440.jpg",
+    "file_path": "/Tobu/Tobu - Candyland.mp3"
   },
   {
-    "title": "Peaches (feat. Daniel Caesar & Giveon)",
-    "artist": "Justin Bieber",
-    "duration": 221,
-    "img_path": "https://i.scdn.co/image/ab67616d0000b273e6f407c7f3a0ec98845e4431",
-    "file_path": "/Justin Bieber/Peaches.mp3"
+    "title": "Nova",
+    "artist": "Ahrix",
+    "duration": 281,
+    "img_path": "https://i1.sndcdn.com/artworks-000044125964-zco3u9-t500x500.jpg",
+    "file_path": "/Ahrix/Ahrix - Nova.mp3"
   },
   {
-    "title": "Levitating (feat. DaBaby)",
-    "artist": "Dua Lipa",
+    "title": "Sky High",
+    "artist": "Elektronomia",
+    "duration": 238,
+    "img_path": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/290/1000x0/sky-high-1586948777-5GCUk56GqG.jpg",
+    "file_path": "/Elektronomia/Elektronomia - Sky High.mp3"
+  },
+  {
+    "title": "Arrow",
+    "artist": "Jim Yosef",
     "duration": 258,
-    "img_path": "https://i.scdn.co/image/ab67616d0000b273bd26ede1ae69327010d49946",
-    "file_path": "/Dua Lipa/Levitating.mp3"
+    "img_path": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/172/1000x0/arrow-1586947152-LUmQRKQIRc.jpg",
+    "file_path": "/Jim Yosef/Jim Yosef - Arrow.mp3"
+  },
+  {
+    "title": "Invincible",
+    "artist": "DEAF KEV",
+    "duration": 273,
+    "img_path": "https://i1.sndcdn.com/artworks-000224592805-nhfd2x-t500x500.jpg",
+    "file_path": "/DEAF KEV/DEAF KEV - Invincible.mp3"
+  },
+  {
+    "title": "Mortals",
+    "artist": "Warriyo",
+    "duration": 230,
+    "img_path": "https://ncsmusic.s3.eu-west-1.amazonaws.com/tracks/000/000/287/1000x0/mortals-feat-laura-brehm-1586948734-yFnA6l5Geq.jpg",
+    "file_path": "/Warriyo/Warriyo - Mortals.mp3"
   }
 ]
