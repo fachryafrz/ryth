@@ -19,7 +19,7 @@ export default function Sidebar() {
       }}
       className={`${
         !sidebarToggle ? `min-w-[250px]` : `min-w-fit`
-      } lg:!h-[100svh] sticky top-0 border-r border-gray-700 overflow-y-auto p-4 hidden xl:flex flex-col gap-4`}
+      } sticky top-0 border-r border-gray-700 overflow-y-auto p-4 hidden xl:flex flex-col gap-4`}
     >
       <div
         className={`flex gap-2 items-center ${

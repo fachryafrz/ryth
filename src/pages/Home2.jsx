@@ -35,7 +35,7 @@ export default function Home2({ songList, setSongList }) {
   };
 
   return (
-    <div className={`relative flex flex-col gap-4 pb-[82px] xl:pb-0`}>
+    <div className={`relative flex flex-col gap-4 xl:pb-0`}>
       <section id="topSong" className={`flex flex-col gap-2`}>
         <div className={`flex items-center justify-between`}>
           <h2 className={`capitalize text-lg sm:text-2xl font-medium`}>
@@ -224,9 +224,6 @@ export default function Home2({ songList, setSongList }) {
           })}
         </div>
       </section>
-      <div className={`xl:hidden flex justify-center`}>
-        <MusicPlayer songList={songList} setSongList={setSongList} />
-      </div>
     </div>
   );
 }

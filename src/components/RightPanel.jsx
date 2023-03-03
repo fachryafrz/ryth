@@ -18,9 +18,12 @@ export default function RightPanel({ songList, setSongList }) {
 
   return (
     <nav
+      style={{
+        height: "calc(100svh - 82px)",
+      }}
       className={`${
         !sidebarToggle ? `min-w-[250px]` : `min-w-fit`
-      } h-[100svh] sticky top-0 border-l border-gray-700 overflow-y-auto hidden xl:flex flex-col gap-4`}
+      } sticky top-0 border-l border-gray-700 overflow-y-auto hidden xl:flex flex-col gap-4`}
     >
       <button
         className={`flex items-center gap-2 rounded sticky top-0 bg-gray-900 pt-4 pb-2 px-4`}
@@ -76,7 +79,7 @@ export default function RightPanel({ songList, setSongList }) {
         </div>
       </div>
 
-      <div className={`p-4 sticky bottom-0 mt-auto bg-gray-900`}>
+      <div className={`hidden p-4 sticky bottom-0 mt-auto bg-gray-900`}>
         <MusicPlayer songList={songList} setSongList={setSongList} />
       </div>
     </nav>
