@@ -5,6 +5,7 @@ import MusicPlayer from "./MusicPlayer";
 import Sidebar from "./Sidebar";
 import TrackCard from "./TrackCard";
 import RightPanel from "./RightPanel";
+import Copyright from "./Copyright";
 
 export {
   Navbar,
@@ -14,4 +15,5 @@ export {
   Sidebar,
   TrackCard,
   RightPanel,
+  Copyright,
 };
