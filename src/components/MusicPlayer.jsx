@@ -16,6 +16,14 @@ export default function MusicPlayer({ songList, setSongList }) {
     }
   };
 
+  const checkIsPlaying = () => {
+    if (!audio.paused) {
+      setIsPlaying(true);
+    } else {
+      setIsPlaying(false);
+    }
+  };
+
   const handlePlay = () => {
     audioRef.current.play();
     setIsPlaying(true);
@@ -61,6 +69,11 @@ export default function MusicPlayer({ songList, setSongList }) {
   const currentSong = songList;
 
   useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.addEventListener("play", handlePlay);
+      audioRef.current.addEventListener("pause", handlePause);
+    }
+
     document.title = isPlaying
       ? `${currentSong && currentSong.title} - ${
           currentSong && currentSong.artist
@@ -70,7 +83,9 @@ export default function MusicPlayer({ songList, setSongList }) {
     const intervalId = setInterval(() => {
       setCurrentTime(audioRef.current && audioRef.current.currentTime);
     }, 1000);
-    return () => clearInterval(intervalId);
+    return () => {
+      clearInterval(intervalId);
+    };
   }, [currentSong, isPlaying]);
 
   return (
