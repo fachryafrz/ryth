@@ -89,7 +89,7 @@ export default function MusicPlayer({ songList, setSongList }) {
   }, [currentSong, isPlaying]);
 
   return (
-    <div className={`sticky bottom-0 w-full`}>
+    <div className={`fixed inset-x-0 bottom-0 w-full`}>
       <input
         type="range"
         min="0"

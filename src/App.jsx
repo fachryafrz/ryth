@@ -19,7 +19,7 @@ function App() {
       <div className={`min-h-screen bg-neutral-900 text-white `}>
         <div id="app" className="flex">
           <Sidebar />
-          <main className={`relative w-full overflow-hidden p-4`}>
+          <main className={`relative mb-[86px] w-full overflow-hidden p-4`}>
             <div className={`-m-4 pb-8`}>
               <Copyright />
             </div>

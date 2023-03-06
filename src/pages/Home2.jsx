@@ -3,14 +3,17 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import data from "../json/topTracks.json";
+import data2 from "../json/remix.json";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import { IonIcon } from "@ionic/react";
 import * as Icon from "ionicons/icons";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Home2({ songList, setSongList }) {
+  const [remix, setRemix] = useState();
+
   const options = { weekday: "long" };
   const today = new Date();
   const dayName = new Intl.DateTimeFormat("en-US", options).format(today);
@@ -37,6 +40,14 @@ export default function Home2({ songList, setSongList }) {
     const formattedSeconds = ("0" + seconds).slice(-2);
     return `${formattedMinutes}:${formattedSeconds}`;
   };
+
+  useEffect(() => {
+    const scrambleArray = () => {
+      setRemix(data2.sort(() => Math.random() - 0.5));
+    };
+
+    scrambleArray();
+  }, []);
 
   return (
     <div className={`relative flex flex-col gap-4 xl:pb-0`}>
@@ -119,39 +130,40 @@ export default function Home2({ songList, setSongList }) {
               </div>
             </Link>
             <div id="rightRemix" className={`flex flex-col gap-1`}>
-              {data.slice(0, 5).map((item, index) => {
-                return (
-                  <button
-                    key={index}
-                    onClick={() => setSongList(item)}
-                    className={`flex h-full w-full items-center gap-4 rounded-lg bg-neutral-800 px-4 py-2 hover:bg-neutral-700`}
-                  >
-                    <span className={`text-sm font-medium text-neutral-400`}>
-                      {index + 1}
-                    </span>
-                    <figure
-                      className={`min-w-[50px] max-w-[50px] overflow-hidden rounded-lg`}
+              {remix &&
+                remix.slice(0, 5).map((item, index) => {
+                  return (
+                    <button
+                      key={index}
+                      onClick={() => setSongList(item)}
+                      className={`flex h-full w-full items-center gap-4 rounded-lg bg-neutral-800 px-4 py-2 hover:bg-neutral-700`}
                     >
-                      <img src={item.img_path} alt={item.title} />
-                    </figure>
-                    <div className={`-ml-2 text-left`}>
-                      <h3 className={`font-medium line-clamp-1`}>
-                        {item.title}
-                      </h3>
-                      <span
-                        className={`text-sm font-medium text-neutral-400 line-clamp-1`}
-                      >
-                        {item.artist}
+                      <span className={`text-sm font-medium text-neutral-400`}>
+                        {index + 1}
                       </span>
-                    </div>
-                    <time
-                      className={`ml-auto text-sm font-medium text-neutral-400`}
-                    >
-                      {formatTime(item.duration)}
-                    </time>
-                  </button>
-                );
-              })}
+                      <figure
+                        className={`min-w-[50px] max-w-[50px] overflow-hidden rounded-lg`}
+                      >
+                        <img src={item.img_path} alt={item.title} />
+                      </figure>
+                      <div className={`-ml-2 text-left`}>
+                        <h3 className={`font-medium line-clamp-1`}>
+                          {item.title}
+                        </h3>
+                        <span
+                          className={`text-sm font-medium text-neutral-400 line-clamp-1`}
+                        >
+                          {item.artist}
+                        </span>
+                      </div>
+                      <time
+                        className={`ml-auto text-sm font-medium text-neutral-400`}
+                      >
+                        {formatTime(item.duration)}
+                      </time>
+                    </button>
+                  );
+                })}
             </div>
           </div>
         </div>

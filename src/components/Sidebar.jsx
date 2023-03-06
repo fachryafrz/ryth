@@ -67,7 +67,7 @@ export default function Sidebar() {
                   getIcons();
                 }, []);
                 return (
-                  <li>
+                  <li key={index}>
                     <NavLink
                       exact
                       to={link.url}

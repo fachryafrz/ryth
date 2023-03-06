@@ -1,5 +1,5 @@
 .swiper-button-disabled {
-  @apply !cursor-not-allowed !border-gray-700 !bg-transparent !text-gray-700;
+  @apply !cursor-not-allowed !border-neutral-700 !bg-transparent !text-neutral-700;
 }
 
 @tailwind base;
@@ -35,12 +35,12 @@
   }
 
   .arrow-btn {
-    @apply grid place-items-center rounded-full border-2 border-white p-1 text-white transition-all hover:bg-transparent hover:bg-white hover:text-gray-900;
+    @apply grid place-items-center rounded-full border-2 border-white p-1 text-white transition-all hover:bg-transparent hover:bg-white hover:text-neutral-900;
   }
   .nav-active {
     @apply bg-neutral-800 !text-white;
   }
   .btn {
-    @apply flex items-center gap-2 rounded-lg bg-neutral-800 px-4 py-3 text-gray-400 transition-all hover:scale-105 active:scale-100;
+    @apply flex items-center gap-2 rounded-lg bg-neutral-800 px-4 py-3 text-neutral-400 transition-all hover:scale-105 active:scale-100;
   }
 }
