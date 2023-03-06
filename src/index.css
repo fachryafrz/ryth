@@ -1,5 +1,5 @@
 .swiper-button-disabled {
-  @apply !text-gray-700 !border-gray-700 !bg-transparent !cursor-not-allowed;
+  @apply !cursor-not-allowed !border-gray-700 !bg-transparent !text-gray-700;
 }
 
 @tailwind base;
@@ -8,7 +8,7 @@
 
 @layer components {
   img {
-    @apply w-full h-full object-cover pointer-events-none;
+    @apply pointer-events-none h-full w-full object-cover;
   }
   ion-icon {
     @apply text-[1.25rem];
@@ -17,9 +17,7 @@
   #listMusic:nth-child(5) {
     @apply border-b-0;
   }
-  #trackCard:hover #contents {
-    @apply !translate-y-0;
-  }
+
   #trackCard:hover figure {
     @apply blur-sm;
   }
@@ -33,16 +31,16 @@
     @apply !opacity-100;
   }
   #playerActions button {
-    @apply grid place-items-center p-2 rounded-full;
+    @apply grid place-items-center rounded-full p-2;
   }
 
   .arrow-btn {
-    @apply transition-all grid place-items-center p-1 border-2 rounded-full bg-white text-gray-900 hover:bg-transparent hover:border-white hover:text-white;
+    @apply grid place-items-center rounded-full border-2 border-white p-1 text-white transition-all hover:bg-transparent hover:bg-white hover:text-gray-900;
   }
   .nav-active {
-    @apply bg-gray-800 !text-white;
+    @apply bg-neutral-800 !text-white;
   }
   .btn {
-    @apply flex items-center gap-2 px-4 py-3 bg-gray-800 rounded-lg text-gray-400 transition-all hover:scale-105 active:scale-100;
+    @apply flex items-center gap-2 rounded-lg bg-neutral-800 px-4 py-3 text-gray-400 transition-all hover:scale-105 active:scale-100;
   }
 }

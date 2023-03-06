@@ -23,18 +23,18 @@ export default function RightPanel({ songList, setSongList }) {
       }}
       className={`${
         !sidebarToggle ? `min-w-[250px]` : `min-w-fit`
-      } sticky top-0 border-l border-gray-700 overflow-y-auto hidden xl:flex flex-col gap-4`}
+      } sticky top-0 hidden flex-col gap-4 overflow-y-auto border-l border-neutral-700 xl:flex`}
     >
       <button
-        className={`flex items-center gap-2 rounded sticky top-0 bg-gray-900 pt-4 pb-2 px-4`}
+        className={`sticky top-0 flex items-center gap-2 rounded bg-neutral-900 px-4 pt-4 pb-2`}
       >
-        <figure className={`aspect-square w-[40px] rounded overflow-hidden`}>
+        <figure className={`aspect-square w-[40px] overflow-hidden rounded`}>
           <img src={user.img_path} alt={user.name} />
         </figure>
-        <div className={`text-left flex flex-col`}>
+        <div className={`flex flex-col text-left`}>
           <h2 className={`text-sm font-medium`}>{user.name}</h2>
           <span
-            className={`text-[12px] text-gray-400 font-medium uppercase tracking-widest`}
+            className={`text-[12px] font-medium uppercase tracking-widest text-neutral-400`}
           >
             {user.plan.name}
           </span>
@@ -44,7 +44,7 @@ export default function RightPanel({ songList, setSongList }) {
       <div className={`flex flex-col gap-2 px-4`}>
         <nav
           aria-label="Tabs"
-          className={`flex items-center text-sm gap-4 font-medium`}
+          className={`flex items-center gap-4 text-sm font-medium`}
         >
           {userItems.map((item, index) => {
             return (
@@ -52,7 +52,7 @@ export default function RightPanel({ songList, setSongList }) {
                 key={index}
                 onClick={() => setActiveTab(index)}
                 className={`transition-all ${
-                  activeTab === index ? `text-white` : `text-gray-600`
+                  activeTab === index ? `text-white` : `text-neutral-600`
                 }`}
               >
                 {item.title}
@@ -60,17 +60,17 @@ export default function RightPanel({ songList, setSongList }) {
             );
           })}
         </nav>
-        <div className={`flex flex-col gap-1 max-h-full overflow-auto`}>
+        <div className={`flex max-h-full flex-col gap-1 overflow-auto`}>
           {userItems[activeTab].contents.map((item, index) => {
             return (
               <button
                 key={index}
-                className={`flex items-center gap-2 hover:bg-gray-800 rounded`}
+                className={`flex items-center gap-2 rounded hover:bg-neutral-800`}
               >
-                <figure className={`max-w-[30px] rounded overflow-hidden`}>
+                <figure className={`max-w-[30px] overflow-hidden rounded`}>
                   <img src={item.img_path} alt={item.name} />
                 </figure>
-                <span className={`line-clamp-1 text-sm font-medium`}>
+                <span className={`text-sm font-medium line-clamp-1`}>
                   {item.name}
                 </span>
               </button>
@@ -79,7 +79,7 @@ export default function RightPanel({ songList, setSongList }) {
         </div>
       </div>
 
-      <div className={`hidden p-4 sticky bottom-0 mt-auto bg-gray-900`}>
+      <div className={`sticky bottom-0 mt-auto hidden bg-neutral-900 p-4`}>
         <MusicPlayer songList={songList} setSongList={setSongList} />
       </div>
     </nav>

@@ -89,18 +89,18 @@ export default function MusicPlayer({ songList, setSongList }) {
   }, [currentSong, isPlaying]);
 
   return (
-    <div className={`w-full fixed inset-x-0 bottom-0`}>
+    <div className={`sticky bottom-0 w-full`}>
       <input
         type="range"
         min="0"
         max={audioRef.current && audioRef.current.duration}
         value={currentTime}
         onChange={handleSeek}
-        className={`w-full h-[2px] absolute inset-x-0 top-0 z-10`}
+        className={`absolute inset-x-0 top-0 z-10 h-[2px] w-full`}
       />
 
       <div
-        className={`bg-gray-800 bg-opacity-70 backdrop-blur w-full p-4 flex items-center gap-2`}
+        className={`flex w-full items-center gap-2 bg-neutral-800 bg-opacity-70 p-4 backdrop-blur`}
       >
         <audio
           src={currentSong && currentSong.file_path}
@@ -109,7 +109,7 @@ export default function MusicPlayer({ songList, setSongList }) {
           ref={audioRef}
         ></audio>
         <figure
-          className={`aspect-square rounded-lg overflow-hidden max-w-[50px]`}
+          className={`aspect-square max-w-[50px] overflow-hidden rounded-lg`}
         >
           {Object.keys(currentSong).length > 0 ? (
             <img
@@ -117,22 +117,24 @@ export default function MusicPlayer({ songList, setSongList }) {
               alt={currentSong && currentSong.title}
             />
           ) : (
-            <div className={`h-full w-[50px] bg-gray-600 animate-pulse`}></div>
+            <div
+              className={`h-full w-[50px] animate-pulse bg-neutral-600`}
+            ></div>
           )}
         </figure>
         <div className={`mr-auto`}>
-          <h2 className={`line-clamp-1 font-medium text-lg`}>
+          <h2 className={`text-lg font-medium line-clamp-1`}>
             {Object.keys(currentSong).length > 0
               ? currentSong.title
               : `Select a song`}
           </h2>
-          <span className={`line-clamp-1 text-sm text-gray-400 font-medium`}>
+          <span className={`text-sm font-medium text-neutral-400 line-clamp-1`}>
             {currentSong && currentSong.artist}
           </span>
         </div>
         {Object.keys(currentSong).length > 0 && (
-          <div className={`flex items-center gap-1 ml-auto`}>
-            <time className={`text-sm text-gray-400 font-medium`}>
+          <div className={`ml-auto flex items-center gap-1`}>
+            <time className={`text-sm font-medium text-neutral-400`}>
               {formatTime(currentTime)}
             </time>
             <input
@@ -141,10 +143,10 @@ export default function MusicPlayer({ songList, setSongList }) {
               max={audioRef.current.duration}
               value={currentTime}
               onChange={handleSeek}
-              className={`w-full h-[2px] hidden`}
+              className={`hidden h-[2px] w-full`}
             />
-            <span className={`text-sm text-gray-400 font-medium`}>/</span>
-            <time className={`text-sm text-gray-400 font-medium`}>
+            <span className={`text-sm font-medium text-neutral-400`}>/</span>
+            <time className={`text-sm font-medium text-neutral-400`}>
               {formatTime(audioRef.current.duration)}
             </time>
           </div>
@@ -152,7 +154,7 @@ export default function MusicPlayer({ songList, setSongList }) {
         <div id="playerActions" className={`flex items-center justify-between`}>
           <button
             onClick={!isPlaying ? handlePlay : handlePause}
-            className={`bg-white text-gray-900 order-3`}
+            className={`order-3 bg-white text-neutral-900`}
           >
             <IonIcon icon={!isPlaying ? Icon.play : Icon.pause} />
           </button>

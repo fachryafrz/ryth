@@ -10,7 +10,7 @@ export default function TrackList({ setShowPlayer, setCurrentTrack }) {
 
   return (
     <div className={`flex flex-col gap-2`}>
-      <h3 className={`text-2xl font-medium pl-2`}>Top Musics</h3>
+      <h3 className={`pl-2 text-2xl font-medium`}>Top Musics</h3>
       <ul>
         {data.map((item, index) => {
           const minutes = Math.floor(item.duration / 60);
@@ -20,39 +20,39 @@ export default function TrackList({ setShowPlayer, setCurrentTrack }) {
             <li
               key={index}
               id="listMusic"
-              className={`border-b border-gray-400`}
+              className={`border-b border-neutral-400`}
             >
               <div className={`flex items-center `}>
                 <button
                   onClick={handlePlaying}
-                  className={`p-2 grid grid-cols-4 gap-2 items-center w-full`}
+                  className={`grid w-full grid-cols-4 items-center gap-2 p-2`}
                 >
                   <div
-                    className={`flex items-center gap-2 sm:gap-4 col-span-2`}
+                    className={`col-span-2 flex items-center gap-2 sm:gap-4`}
                   >
                     <figure
-                      className={`min-w-[30px] max-w-[30px] sm:max-w-[50px] aspect-square`}
+                      className={`aspect-square min-w-[30px] max-w-[30px] sm:max-w-[50px]`}
                     >
                       <img src={item.img_path} alt={item.artist} />
                     </figure>
-                    <h4 className={`line-clamp-2 text-left`}>{item.title}</h4>
+                    <h4 className={`text-left line-clamp-2`}>{item.title}</h4>
                   </div>
                   <span
-                    className={`text-sm text-gray-400 font-medium line-clamp-1`}
+                    className={`text-sm font-medium text-neutral-400 line-clamp-1`}
                   >
                     {item.artist}
                   </span>
-                  <time className={`text-sm text-gray-400 font-medium`}>
+                  <time className={`text-sm font-medium text-neutral-400`}>
                     {`${minutes}:${seconds < 10 ? `0${seconds}` : seconds}`}
                   </time>
                 </button>
-                <button className={`ml-auto p-2 flex`}>
+                <button className={`ml-auto flex p-2`}>
                   <IonIcon
                     icon={!item.favorite ? Icon.heartOutline : Icon.heart}
                   />
                 </button>
                 <button
-                  className={`p-2 flex hover:bg-white hover:bg-opacity-10 rounded`}
+                  className={`flex rounded p-2 hover:bg-white hover:bg-opacity-10`}
                 >
                   <IonIcon icon={Icon.ellipsisVertical} />
                 </button>

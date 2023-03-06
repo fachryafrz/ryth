@@ -6,7 +6,7 @@ import links from "../json/sidebarLinks.json";
 import { useEffect, useState } from "react";
 
 export default function Sidebar() {
-  const [sidebarToggle, setSidebarToggle] = useState(false);
+  const [sidebarToggle, setSidebarToggle] = useState(true);
 
   const handleSidebar = () => {
     setSidebarToggle(!sidebarToggle);
@@ -19,14 +19,14 @@ export default function Sidebar() {
       }}
       className={`${
         !sidebarToggle ? `min-w-[250px]` : `min-w-fit`
-      } sticky top-0 border-r border-gray-700 overflow-y-auto p-4 hidden xl:flex flex-col gap-4`}
+      } sticky top-0 hidden flex-col gap-4 overflow-y-auto border-r border-neutral-700 p-4 xl:flex`}
     >
       <div
-        className={`flex gap-2 items-center ${
+        className={`flex items-center gap-4 ${
           !sidebarToggle ? `flex-row` : `flex-col`
         }`}
       >
-        <button onClick={handleSidebar} className={`z-50 max-w-fit arrow-btn`}>
+        <button onClick={handleSidebar} className={`arrow-btn z-50 max-w-fit`}>
           <IonIcon
             icon={!sidebarToggle ? Icon.chevronBack : Icon.chevronForward}
           />
@@ -35,33 +35,23 @@ export default function Sidebar() {
           to={`/`}
           className={`${
             !sidebarToggle && `p-0`
-          } flex items-center gap-2 max-w-fit`}
+          } flex max-w-fit items-center gap-2`}
         >
           <figure className={!sidebarToggle ? `w-[40px]` : `w-[30px]`}>
             <img src={logo} alt={import.meta.env.VITE_APP_NAME} />
           </figure>
           {!sidebarToggle && (
-            <h1 className={`font-medium text-2xl`}>
+            <h1 className={`text-2xl font-medium`}>
               {import.meta.env.VITE_APP_NAME}
             </h1>
           )}
         </Link>
       </div>
-      <NavLink
-        to={`/search`}
-        activeClassName="!bg-white !text-gray-900"
-        className={`btn justify-center aspect-square ${
-          !sidebarToggle && `!justify-start !aspect-auto`
-        }`}
-      >
-        <IonIcon icon={Icon.search} />
-        {!sidebarToggle && "Search..."}
-      </NavLink>
       {links.map((item, index) => {
         return (
           <section key={index}>
             <h2
-              className={`text-sm text-gray-500 font-medium mb-1 mx-auto max-w-fit ${
+              className={`mx-auto mb-1 max-w-fit text-sm font-medium text-neutral-500 ${
                 !sidebarToggle && `!mx-0`
               }`}
             >
@@ -83,8 +73,8 @@ export default function Sidebar() {
                       to={link.url}
                       key={index}
                       activeClassName={`nav-active`}
-                      className={`flex items-center gap-2 p-4 rounded-lg text-gray-500 font-medium hover:text-white transition-all mt-0.5 justify-center aspect-square ${
-                        !sidebarToggle && `py-2 !justify-start !aspect-auto`
+                      className={`mt-0.5 flex aspect-square items-center justify-center gap-2 rounded-lg p-4 font-medium text-neutral-500 transition-all hover:text-white ${
+                        !sidebarToggle && `!aspect-auto !justify-start py-2`
                       }`}
                     >
                       <IonIcon icon={icons[index]} />
@@ -97,15 +87,6 @@ export default function Sidebar() {
           </section>
         );
       })}
-      <button
-        onClick={() => confirm("Are you sure wants to logout?")}
-        className={`btn w-full mt-auto bg-red-900 text-white border-2 border-red-600 justify-center aspect-square hover:bg-red-600 hover:text-white ${
-          !sidebarToggle && `!justify-start !aspect-auto`
-        }`}
-      >
-        <IonIcon icon={Icon.logOutOutline} />
-        {!sidebarToggle && `Logout`}
-      </button>
     </nav>
   );
 }

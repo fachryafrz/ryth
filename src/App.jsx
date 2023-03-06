@@ -16,11 +16,13 @@ function App() {
 
   return (
     <Router>
-      <div className={`bg-gray-900 text-white min-h-screen `}>
-        <Copyright />
+      <div className={`min-h-screen bg-neutral-900 text-white `}>
         <div id="app" className="flex">
           <Sidebar />
-          <main className={`p-4 mb-[82px] relative w-full overflow-hidden`}>
+          <main className={`relative w-full overflow-hidden p-4`}>
+            <div className={`-m-4 pb-8`}>
+              <Copyright />
+            </div>
             <Switch>
               <Route exact path={`/`}>
                 <Home2 songList={songList} setSongList={setSongList} />
@@ -31,10 +33,8 @@ function App() {
             </Switch>
           </main>
           <RightPanel songList={songList} setSongList={setSongList} />
-          <div className={`flex justify-center`}>
-            <MusicPlayer songList={songList} setSongList={setSongList} />
-          </div>
         </div>
+        <MusicPlayer songList={songList} setSongList={setSongList} />
       </div>
     </Router>
   );
