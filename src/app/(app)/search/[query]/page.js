@@ -1,7 +1,7 @@
 import Item from "@/components/Search/Item";
 import Link from "next/link";
-import { fetchData } from "@/server/actions";
 import pluralize from "pluralize";
+import { fetchAPI } from "@/utils/api";
 
 export async function generateMetadata({ params }) {
   const { query: rawQuery } = params;
@@ -32,8 +32,9 @@ export default async function page({ params }) {
     "audiobook",
   ];
 
-  const { data } = await fetchData(`/search?q=${query}`, {
+  const { data } = await fetchAPI(`/search`, {
     params: {
+      q: query,
       type: types.join(","),
     },
   });

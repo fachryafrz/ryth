@@ -6,7 +6,7 @@ import ArtistCard from "../Artist/Card";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import LoadingCard from "../Loading/Card";
-import { fetchData } from "@/server/actions";
+import { fetchAPI } from "@/utils/api";
 
 export default function FavoriteArtists() {
   const showLimit = 5;
@@ -18,7 +18,7 @@ export default function FavoriteArtists() {
   } = useQuery({
     queryKey: [`/me/following?type=artist`],
     queryFn: async ({ queryKey }) => {
-      return await fetchData(queryKey[0]).then(({ data }) => data.artists);
+      return await fetchAPI(queryKey[0]).then(({ data }) => data.artists);
     },
   });
 
@@ -28,9 +28,9 @@ export default function FavoriteArtists() {
       <div className={`flex items-center justify-between`}>
         <h2 className={`section-title`}>Favorite Artists</h2>
 
-        <Link href={`/`} className={`text-xs font-medium text-primary`}>
+        {/* <Link href={`/`} className={`text-xs font-medium text-primary`}>
           See all
-        </Link>
+        </Link> */}
       </div>
 
       {loading && (

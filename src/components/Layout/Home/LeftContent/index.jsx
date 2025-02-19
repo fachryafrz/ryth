@@ -19,6 +19,7 @@ export default function LeftContent({ categories, categoriesPlaylists }) {
       queryFn: async ({ queryKey }) => {
         return await fetchData(queryKey[0]).then(({ data }) => data);
       },
+      enabled: !!user,
     });
 
   const handleFindCategory = (name) => {
@@ -58,7 +59,7 @@ export default function LeftContent({ categories, categoriesPlaylists }) {
           </div>
 
           <div>
-            <div className={`sticky top-16`}>
+            <div className={`sticky top-0`}>
               <FavoriteArtists />
             </div>
           </div>

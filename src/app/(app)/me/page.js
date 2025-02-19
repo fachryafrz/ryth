@@ -1,31 +1,34 @@
-import LoginAlert from "@/components/Modals/LoginAlert";
 import Profile from "@/components/User/Profile";
-import { fetchData } from "@/server/actions";
+import { fetchAPI } from "@/utils/api";
 import { redirect } from "next/navigation";
 
 export async function generateMetadata() {
-  const { data: user, error } = await fetchData(`/me`);
+  try {
+    const { data: user, error } = await fetchAPI(`/me`);
 
-  if (error)
     return {
-      title: "You are not logged in",
+      title: `${user.display_name}`,
     };
+  } catch (error) {
+    if (error)
+      return {
+        title: "You are not logged in",
+      };
+  }
 
-  return {
-    title: `${user.display_name}`,
-  };
+
 }
 
 export default async function page() {
-  const { data: user, error } = await fetchData(`/me`).catch((error) =>
-    redirect("/"),
-  );
+  try {
+    const { data: user } = await fetchAPI(`/me`)
 
-  if (error) return <LoginAlert show={true} redirect={`/`} />;
-
-  return (
-    <div>
-      <Profile user={user} />
-    </div>
-  );
+    return (
+      <div>
+        <Profile user={user} />
+      </div>
+    );
+  } catch (error) {
+    redirect("/")
+  }
 }

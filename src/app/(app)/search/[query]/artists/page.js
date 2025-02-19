@@ -1,5 +1,5 @@
 import Item from "@/components/Search/Item";
-import { fetchData } from "@/server/actions";
+import { fetchAPI } from "@/utils/api";
 import pluralize from "pluralize";
 
 export async function generateMetadata({ params }) {
@@ -19,8 +19,8 @@ export async function generateMetadata({ params }) {
 export default async function page({ params }) {
   const { query } = params;
 
-  const { data } = await fetchData(`/search?q=${query}`, {
-    params: { type: "artist" },
+  const { data } = await fetchAPI(`/search`, {
+    params: { q: query, type: "artist" },
   });
 
   return (

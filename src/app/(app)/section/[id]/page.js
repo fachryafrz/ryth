@@ -1,13 +1,11 @@
 import CardVertical from "@/components/Card/CardVertical";
-import { SPOTIFY_ACCESS_TOKEN } from "@/lib/constants";
-import { fetchData } from "@/server/actions";
-import Link from "next/link";
+import { fetchAPI } from "@/utils/api";
 import React from "react";
 
 export async function generateMetadata({ params }) {
   const { id } = params;
 
-  const { data } = await fetchData(`/browse/categories/${id}/playlists`);
+  const { data } = await fetchAPI(`/browse/categories/${id}/playlists`);
 
   return {
     title: `${data.message}`,
@@ -17,7 +15,7 @@ export async function generateMetadata({ params }) {
 export default async function page({ params }) {
   const { id } = params;
 
-  const { data } = await fetchData(`/browse/categories/${id}/playlists`);
+  const { data } = await fetchAPI(`/browse/categories/${id}/playlists`);
 
   return (
     <div className={`@container`}>
